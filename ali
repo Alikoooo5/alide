@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ədədi dönüşümlər</title>
+  <script>
+    function convertToDecimal() {
+      var binaryNumber = document.getElementById('binaryNumber').value;
+      var decimalNumber = parseInt(binaryNumber, 2);
+      document.getElementById('decimalNumber').value = decimalNumber;
+    }
+    
+    function convertToBinary() {
+      var decimalNumber = document.getElementById('decimalNumber').value;
+      var binaryNumber = parseInt(decimalNumber).toString(2);
+      document.getElementById('binaryNumber').value = binaryNumber;
+    }
+  </script>
+</head>
+<body>
+  <h2>Ədədi dönüşümlər</h2>
+  <label for="binaryNumber">2 li sistemdəki ədəd:</label>
+  <input type="text" id="binaryNumber">
+  <button onclick="convertToDecimal()">10 luğa çevir</button>
+  <br>
+  <label for="decimalNumber">10 luq sistemdəki ədəd:</label>
+  <input type="text" id="decimalNumber">
+  <button onclick="convertToBinary()">2 liyə çevir</button>
+</body>
+</html>
